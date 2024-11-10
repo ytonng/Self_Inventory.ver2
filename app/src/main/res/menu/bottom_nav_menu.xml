@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- First clickable item -->
+    <item
+        android:id="@+id/btm_nav_up"
+        android:title="UpFridge"
+        android:icon="@drawable/freezer" />
+
+    <!-- Spacer item -->
+    <item
+        android:id="@+id/spacer1"
+        android:title=""
+        android:icon="@android:color/transparent"
+        android:enabled="false"
+        android:checkable="false" />
+
+    <!-- Second Spacer item -->
+    <item
+        android:id="@+id/spacer2"
+        android:title=""
+        android:icon="@android:color/transparent"
+        android:enabled="false"
+        android:checkable="false" />
+
+    <!-- Second clickable item -->
+    <item
+        android:id="@+id/btm_nav_down"
+        android:title="DownFridge"
+        android:icon="@drawable/fan" />
+
+</menu>

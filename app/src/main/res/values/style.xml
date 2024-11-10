@@ -1,0 +1,6 @@
+<!-- res/values/styles.xml -->
+<resources>
+    <style name="CustomSpinnerStyle">
+        <item name="android:textColor">@color/lavender</item> <!-- Custom text color -->
+    </style>
+</resources>

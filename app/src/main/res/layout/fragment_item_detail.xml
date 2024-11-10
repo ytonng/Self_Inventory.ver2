@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonLayout"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Item Image -->
+            <ImageView
+                android:id="@+id/itemImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabonara"
+                android:contentDescription="Item Image" />
+
+            <!-- Name Field -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="16dp" />
+
+            <EditText
+                android:id="@+id/itemnameField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Item name"
+                android:contentDescription="Item Name Edit Text" />
+
+            <!-- Storage Location with Spinner -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Add Icon"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/chooseIconImageView"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/baseline_assignment_add_24"
+            android:contentDescription="Choose Icon"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Storage Location"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="16dp" />
+
+            <Spinner
+                android:id="@+id/storageLocationSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Storage Location Spinner" />
+
+            <!-- Storage Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Storage Date"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="8dp" />
+
+            <EditText
+                android:id="@+id/storageDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select storage date"
+                android:focusable="false"
+                android:contentDescription="Storage Date Edit Text" />
+
+            <!-- Expiration Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expiration Date"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="8dp" />
+
+            <EditText
+                android:id="@+id/expirationDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select expiration date"
+                android:focusable="false"
+                android:contentDescription="Expiration Date Edit Text" />
+
+            <!-- Shelf Life with NumberPicker -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shelf Life (days)"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="8dp" />
+
+            <NumberPicker
+                android:id="@+id/shelfLifePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Shelf Life Number Picker" />
+
+            <!-- Quantity with NumberPicker -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="8dp" />
+
+            <NumberPicker
+                android:id="@+id/quantityPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Quantity Number Picker" />
+
+            <!-- Nutritional Information -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nutritional Information"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingTop="8dp" />
+
+            <EditText
+                android:id="@+id/nutritionalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:contentDescription="Nutritional Information Edit Text"
+                android:hint="Enter nutritional information" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed button layout at the bottom -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Upload Image Button -->
+        <Button
+            android:id="@+id/detectexpirydate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textAllCaps="false"
+            android:text="Scan ExpiryDate" />
+
+        <Button
+            android:id="@+id/uploadImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/lavender"
+            android:contentDescription="Upload Image Button"
+            android:text="Upload Image"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lavender"
+            android:contentDescription="Save Button"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>
